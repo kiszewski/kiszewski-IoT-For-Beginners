@@ -1,14 +1,10 @@
 import json
 import time
-
 import paho.mqtt.client as mqtt
 
-id = 'kiszewski_test'
+from configs import *
 
-client_telemetry_topic = id + '/telemetry'
-server_command_topic = id + '/commands'
 client_name = id + 'nightlight_server'
-
 mqtt_client = mqtt.Client(client_name)
 mqtt_client.connect('test.mosquitto.org')
 
